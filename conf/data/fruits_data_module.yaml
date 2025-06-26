@@ -1,0 +1,9 @@
+# последовательность и следующий элемент как таргет
+
+_target_: src.data.fruits_data_module.FruitsDataModule
+
+data_path: ${paths.data_dir}/fruits
+
+batch_size: 128
+
+train_loader_num_worker: 4

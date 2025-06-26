@@ -1,0 +1,33 @@
+[project]
+name = "minecraft"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Yan",email = "itgvii@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "opencv-python (>=4.11.0.86,<5.0.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+torch = "^2.7.1"
+torchvision = "^0.22.1"
+tqdm = "^4.67.1"
+ipywidgets = "^8.1.7"
+scikit-learn = "^1.7.0"
+pandas = "^2.3.0"
+numpy = "^2.3.0"
+matplotlib = "^3.10.3"
+seaborn = "^0.13.2"
+lightning = "^2.5.1.post0"
+ipykernel = "^6.29.5"
+aim = "^3.29.1"
+hydra-core = "^1.3.2"
+

@@ -1,0 +1,17 @@
+max_epoch: 1000
+log_every_n_steps: 1
+accelerator: 'gpu'
+
+callbacks:
+  checkpoint_callback:
+    _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    filename: null
+    # save_top_k: 3
+    # monitor: "val_loss"
+    # mode: "min"
+    every_n_epochs: 10
+    save_last: True
+  learning_rate_monitor:
+    _target_: lightning.pytorch.callbacks.LearningRateMonitor
+    logging_interval: epoch

@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /data: skins_data_module
+  - override /model: wgan_1
+  - override /trainer: gpu
+  - override /loggers: [aim]
+
+loggers:
+  aim:
+    experiment: skins_wgan
+
+ckpt_path: /home/yan/projects/minecraft/outputs/2025-06-23/19-53-03/epoch=29-step=74760.ckpt

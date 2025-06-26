@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /data: fruits_data_module
+  - override /model: gan
+  - override /trainer: gpu
+  - override /loggers: [aim]
+
+loggers:
+  aim:
+    experiment: fruits_gan
+
+ckpt_path: null

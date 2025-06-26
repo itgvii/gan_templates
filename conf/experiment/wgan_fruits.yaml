@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - override /data: fruits_data_module
+  - override /model: wgan_1
+  - override /trainer: gpu
+  - override /loggers: [aim]
+
+loggers:
+  aim:
+    experiment: fruits_gan
+
+ckpt_path: /home/yan/projects/minecraft/outputs/2025-06-25/00-02-34/epoch=599-step=264000.ckpt

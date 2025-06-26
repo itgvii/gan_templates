@@ -1,0 +1,5 @@
+root_dir: .
+
+data_dir: ${paths.root_dir}/data
+logs_dir: ${paths.root_dir}/logs
+output_dir: ${paths.root_dir}/outputs

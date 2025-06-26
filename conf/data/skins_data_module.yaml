@@ -1,0 +1,8 @@
+# последовательность и следующий элемент как таргет
+
+_target_: src.data.skins_data_module.SkinsDataModule
+
+data_path: ${paths.data_dir}/Skins
+
+batch_size: 128
+train_loader_num_worker: 4

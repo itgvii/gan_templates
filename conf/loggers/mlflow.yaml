@@ -1,0 +1,4 @@
+mlflow:
+  _target_: lightning.pytorch.loggers.mlflow.MLFlowLogger
+  tracking_uri: ${paths.logs_dir}/mlflow/mlruns # run `mlflow ui` command inside the `logs/mlflow/` dir to open the UI
+  experiment_name: 'ae'

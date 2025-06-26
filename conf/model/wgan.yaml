@@ -1,0 +1,19 @@
+_target_: src.models.wgan.WGAN
+
+
+lr_g: 0.0001
+lr_c: 0.00005
+latent_dim: 512
+
+# optimizer:
+#   _target_: torch.optim.Adam
+#   _partial_: true
+#   lr: 0.001
+
+# scheduler:
+#   _target_: transformers.get_linear_schedule_with_warmup
+#   _partial_: true
+#   # Сколько шагов warm‑up
+#   num_warmup_steps: 3
+#   # Общее число шагов обучения
+#   num_training_steps: 100
