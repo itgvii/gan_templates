@@ -1,0 +1,20 @@
+defaults:
+  - _self_
+  - paths: default
+  - general: general
+  - experiment: null
+
+model:
+  _target_: src.models.wgan_1.WGAN.load_from_checkpoint
+  checkpoint_path: /home/yan/projects/gan/outputs/2025-06-23/23-45-13/epoch=99-step=249200.ckpt
+
+trainer:
+  _target_: lightning.pytorch.Trainer
+  accelerator: cpu
+
+torch_matmul_precision: 'medium'
+
+num_gen_pics: 64
+save_dir: ${paths.output_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+# ovverides:
