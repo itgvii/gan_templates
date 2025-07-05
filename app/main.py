@@ -27,3 +27,12 @@ async def model_predict():
     result.save(buf, format='PNG')
     buf.seek(0)
     return StreamingResponse(buf, media_type="image/png")
+
+# Определяем эндпоинт для предсказания зарплаты
+@app.get("/gen_skin_get/")
+async def model_predict_get():
+    result = gen_skin()  # PIL.Image
+    buf = io.BytesIO()
+    result.save(buf, format='PNG')
+    buf.seek(0)
+    return StreamingResponse(buf, media_type="image/png")
